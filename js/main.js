@@ -112,12 +112,12 @@ angular.module("myApp", ["firebase", "geolocation", "ui.bootstrap.modal"])
 					
 					lat = lat + "";
 					lon = lon + "";
-					lat = lat.substring(0, 9);
+					lat = lat.substring(0, 9); //reducing precision of locations provided by geolocation api. 
 					lon = lon.substring(0, 11);
-					lat = Number(lat);
+					lat = Number(lat); //converting lat and lon to number type, to compare with location from api data. 
 					lon = Number(lon);
-					lat = 37.79089;
-					lon = -122.399494; 
+					//lat = 37.79089; //commenting hardcoded value, used to test. 
+					//lon = -122.399494; 
 					//console.log('dataLat :: '+dataLat+'  dataLon:: '+dataLon +'   lat::  '+lat+'  lon::'+lon);
 					console.log(' :: '+ lat + ': '+'lon');
 					if(dataLat == lat && dataLon == lon){
